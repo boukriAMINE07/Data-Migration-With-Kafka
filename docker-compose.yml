@@ -1,0 +1,13 @@
+version: '2'
+services:
+  db:
+    image: mysql:latest
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: 'HJ7#jK9$3qL@5N'
+      MYSQL_DATABASE: E_commerce2
+      MYSQL_PASSWORD: ''
+    ports:
+      - '3307:3306'
+    volumes:
+      - ./mysql-data:/var/lib/mysql
