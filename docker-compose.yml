@@ -14,7 +14,7 @@ services:
     networks:
       - e-commerce_default
   second-springboot-app:
-    image: second-springboot-app
+    image: mouradtals/e-commerce:0.0.1-SNAPSHOT
     depends_on:
       - db
     build: .
