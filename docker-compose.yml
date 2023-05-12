@@ -5,7 +5,7 @@ services:
     image: mysql:latest
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: 'HJ7#jK9$3qL@5N'
+      MYSQL_ROOT_PASSWORD: 'mysql'
       MYSQL_DATABASE: E_commerce2
     ports:
       - '3307:3306'
@@ -23,7 +23,7 @@ services:
     environment:
       MYSQL_HOST: db
       MYSQL_USER: root
-      MYSQL_PASSWORD: HJ7#jK9$3qL@5N
+      MYSQL_PASSWORD: 'mysql'
       MYSQL_PORT: 3306
       SPRING_KAFKA_BOOTSTRAP-SERVERS: kafka:29092
     networks:
