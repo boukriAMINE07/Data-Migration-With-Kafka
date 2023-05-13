@@ -1,7 +1,7 @@
 version: '3'
 services:
-  db:
-    container_name: db
+  mysqlSecondDB:
+    container_name: mysqlSecondDB
     image: mysql:latest
     restart: always
     environment:
@@ -10,18 +10,18 @@ services:
     ports:
       - '3309:3306'
     volumes:
-      - ./mysql-data:/var/lib/mysql
+      - ./mysqlSecondDB:/var/lib/mysql
     networks:
       - ecommerceboukri_default
   second-springboot-app:
     image: mouradtals/secondecommerce:0.0.1
     depends_on:
-      - db
+      - mysqlSecondDB
     build: .
     ports:
       - "8082:8082"
     environment:
-      MYSQL_HOST: db
+      MYSQL_HOST: mysqlSecondDB
       MYSQL_USER: root
       MYSQL_PASSWORD: 'mysql'
       MYSQL_PORT: 3306
