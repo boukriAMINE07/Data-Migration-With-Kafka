@@ -8,13 +8,13 @@ services:
       MYSQL_ROOT_PASSWORD: mysql
       MYSQL_DATABASE: E_commerce2
     ports:
-      - '3309:3306'
+      - '3361:3306'
     volumes:
       - ./mysqlSecondDB:/var/lib/mysql
     networks:
       - ecommerceboukri_default
   second-springboot-app:
-    image: mouradtals/secondecommerce:0.0.1
+    image: mouradtals/secondecommerce:0.0.1-SNAPSHOT
     depends_on:
       - mysqlSecondDB
     build: .
