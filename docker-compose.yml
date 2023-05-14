@@ -24,7 +24,6 @@ services:
       MYSQL_HOST: db
       MYSQL_USER: root
       MYSQL_PASSWORD: mysql
-
       SPRING_KAFKA_BOOTSTRAP-SERVERS: kafka:29092
     networks:
         - ecommerceboukri_default
